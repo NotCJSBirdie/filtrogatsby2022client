@@ -1,0 +1,26 @@
+module.exports = {
+  content: [
+    "./src/pages/index.js",
+    "./src/pages/components/Header.js",
+    "./src/pages/components/Row1.js",
+    "./src/pages/components/Row2.js",
+    "./src/pages/components/Row3.js",
+    "./src/pages/components/Row4.js",
+    "./src/pages/components/Row5.js",
+    "./src/pages/components/Row6.js",
+    "./src/pages/components/Row7.js",
+    "./src/pages/components/Row8.js",
+    "./src/pages/components/Row9.js",
+    "./src/pages/components/Row10.js",
+    "./src/pages/components/Row11.js",
+    "./src/pages/components/Row12.js",
+    "./src/pages/components/Row13.js",
+    "./src/pages/components/Footer.js",
+    "./src/pages/about.js",
+    "./src/pages/components/AboutUs.js",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [require("tailwind-scrollbar-hide")],
+};

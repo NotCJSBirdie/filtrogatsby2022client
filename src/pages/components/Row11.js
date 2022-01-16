@@ -1,0 +1,98 @@
+import React from "react";
+import axios from "axios";
+import { useState } from "react";
+import { useEffect } from "react";
+
+const Row11 = () => {
+  const [listofProducts, setListofProducts] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("https://filtrogatsby2022productserver.vercel.app/getProducts")
+      .then((response) => {
+        setListofProducts(response.data);
+      });
+  }, []);
+
+  return (
+    <div>
+      <section className="text-gray-600 body-font">
+        <div className="container px-5 py-5 mx-auto">
+          <div className="flex flex-wrap -m-4">
+            <div className="p-4 w-full md:w-1/3 hover:transition-transform  hover:ease-in-out hover:rotate-3">
+              <div className="h-full overflow-hidden">
+                <img
+                  className="w-full object-cover object-center h-96"
+                  src="https://freight.cargo.site/w/1000/q/75/i/68fc5df79247db9f91ce3880d399738cf67ac9588b6fd56d8f1c11ab6e7c35c2/candle.jpeg"
+                  alt="blog"
+                />
+                {
+                  listofProducts.map((product) => {
+                    return (
+                      <div>
+                        <h1 className="title-font text-lg font-medium mt-3">
+                          {product.productname}
+                        </h1>
+                        <p className="leading-relaxed mb-3 text-gray-400">
+                          {product.productcategory}
+                        </p>
+                      </div>
+                    );
+                  })[30]
+                }
+              </div>
+            </div>
+            <div className="p-4 w-full md:w-1/3 hover:transition-transform  hover:ease-in-out hover:rotate-3">
+              <div className="h-full overflow-hidden">
+                <img
+                  className="h-96 w-full object-cover object-center"
+                  src="https://freight.cargo.site/w/498/q/94/i/4a2c4180cc547570cce927b2eef8973d207d66645bad46af87a27ba77129bb2a/_84.JPG"
+                  alt="blog"
+                />
+                {
+                  listofProducts.map((product) => {
+                    return (
+                      <div>
+                        <h1 className="title-font text-lg font-medium mt-3">
+                          {product.productname}
+                        </h1>
+                        <p className="leading-relaxed mb-3 text-gray-400">
+                          {product.productcategory}
+                        </p>
+                      </div>
+                    );
+                  })[31]
+                }
+              </div>
+            </div>
+            <div className="p-4 w-full md:w-1/3 hover:transition-transform  hover:ease-in-out hover:rotate-3">
+              <div className="h-full overflow-hidden">
+                <img
+                  className="h-96 w-full object-cover object-center"
+                  src="https://freight.cargo.site/w/768/q/75/i/2e2a01bd6eed2859db17b36b534d9dd45daa532f3abe32873a54830ec15500e4/_86.JPG"
+                  alt="blog"
+                />
+                {
+                  listofProducts.map((product) => {
+                    return (
+                      <div>
+                        <h1 className="title-font text-lg font-medium mt-3">
+                          {product.productname}
+                        </h1>
+                        <p className="leading-relaxed mb-3 text-gray-400">
+                          {product.productcategory}
+                        </p>
+                      </div>
+                    );
+                  })[32]
+                }
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default Row11;

@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Neue Haas Grotesk";
+  src: url(../fonts/NHaasGroteskTXPro-55Rg.ttf);
+}
+
+body {
+  background-color: #f4ff79;
+  font-family: "Neue Haas Grotesk";
+  scrollbar-width: none;
+}
+
+/* this is the just to hide the scrollbar in google chrome */
+::-webkit-scrollbar {
+  display: none;
+}
